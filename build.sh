@@ -35,6 +35,7 @@ case $1 in
 	basic) name="Basic" ;;
 	standard) name="Standard" ;;
 	full) name="Full" ;;
+	svmx) name="svmx" ;;
 	*)
 		echo ""
 		echo "Usage:"
@@ -147,4 +148,7 @@ fi
 
 echo ""
 echo "Build created into the \"build\" directory."
+echo "Copying to ..."
+(rm -rf /Users/prakashsnethilvel/Documents/SFMDesigner/GIT/designer-2.0/public/ckeditor)
+(cp -R  build/4.11.3/svmx/ckeditor /Users/prakashsnethilvel/Documents/SFMDesigner/GIT/designer-2.0/public/)
 echo ""
