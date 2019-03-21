@@ -8,13 +8,19 @@ CKEDITOR.editorConfig = function( config ) {
 	// config.language = 'fr';
 	// config.uiColor = '#AADC6E';
 	config.allowedContent = true;
-	config.extraPlugins='textmatch,autocomplete,codemirror,clipboard,textwatcher,placeholder,widget,widgetselection,notification,lineutils,dialogui,sourcedialog';
+	config.pasteFilter='plain-text';
+	config.basicEntities = false;
+	config.fillEmptyBlocks = false;
+	config.tabSpaces = 0;
+	config.forcePasteAsPlainText = true;
+	config.entities = false;
+	config.extraPlugins='htmlwriter,textmatch,autocomplete,codemirror,clipboard,textwatcher,placeholder,widget,widgetselection,notification,lineutils,dialogui,sourcedialog';
 	config.codemirror = {
 	// Define the language specific mode 'htmlmixed' for html  including (css, xml, javascript), 'application/x-httpd-php' for php mode including html, or 'text/javascript' for using java script only 
 	mode: 'htmlmixed',
      // Set this to the theme you wish to use (codemirror themes)
 	theme: 'material',
-
+	lineNumbers:true,
 	// Whether or not you want Brackets to automatically close themselves
 	autoCloseBrackets: true,
 
@@ -37,7 +43,7 @@ CKEDITOR.editorConfig = function( config ) {
 	enableCodeFormatting: true,
 	
 	// Whether or not to enable search tools, CTRL+F (Find), CTRL+SHIFT+F (Replace), CTRL+SHIFT+R (Replace All), CTRL+G (Find Next), CTRL+SHIFT+G (Find Previous)
-	enableSearchTools: true,
+	enableSearchTools: false,
 	
 	// Whether or not to highlight all matches of current word/selection
 	highlightMatches: true,

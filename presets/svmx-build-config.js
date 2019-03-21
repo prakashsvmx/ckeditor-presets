@@ -33,6 +33,7 @@ var CKBUILDER_CONFIG = {
 		'.git'
 	],
 	plugins: {
+		htmlwriter:1,
 		autocomplete:1,
 		sourcedialog:1,
 		codemirror:1,
